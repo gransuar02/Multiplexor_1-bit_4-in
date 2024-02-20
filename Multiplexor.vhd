@@ -9,10 +9,8 @@ entity Mux is
 end Mux ; 
 
 architecture archMux of Mux is
-    signal : P1,P2,P3,P4 std_logic := '0';
+    signal P1,P2,P3,P4 : std_logic;
 begin
-    s0 <= '0';
-    s1 <= '0';
     P1 <= a and not s0 and not s1;
     P2 <= b and not s0 and s1;
     P3 <= c and s0 and not s1;
